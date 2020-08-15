@@ -4,11 +4,7 @@ Source: https://www.researchgate.net/publication/277411157_Deep_Learning
 by Yann LeCun, Yoshua Bengio & Geoffery Hinton
 Year: 2015
 
----
-
 ## General
-
----
 
 #### What is Deep Learning?
 
@@ -59,11 +55,8 @@ Supervised Classification:
 3. Testing
     - The performance of a system is measured on a previsiouly unseen labeled test set by comparing the predicted labels with the actual labels using the error or some other metric
 
----
 
 ## Convulational Neural Networks
-
----
 
 #### What are Convolotunional Neural Networks?
 
@@ -95,11 +88,8 @@ ConvNets take advantage of properties of natural signals through:
 3. pooling - keeps the feture map sizes in check
 4. use of many layers - allows for learning of more complex features
 
----
 
 ## Distributed Representations
-
----
 
 Deep Neural Networks discover distributed representations for data. No single unit in the network is responsible for determining the representation but taken together the activations provide a coherent representation.
 
@@ -110,11 +100,8 @@ Deep Neural Networks discover distributed representations for data. No single un
 
 ![Learning Word Vecs](LearningWordVecs.png)
 
----
 
 ## Recurrent Neural Networks
-
----
 
 #### What are Recurrent Neural Networks?
 
@@ -146,11 +133,8 @@ RNNs have performed well at
 -   The Recurrent Neural Network is designed to learn long-term dependenies however it has limitations with string information
 -   For that reason explicit memory has been introduced with LSTMs
 
----
 
 ## Future of Deep Learning
-
----
 
 -   **Unsupervised learning** will become important as learning in humans is primarily unsupervised
 -   Progress can be made in **Computer Vision** by combining Deep Learning (ConvNets, RNNs) with Reinforcement Learning
