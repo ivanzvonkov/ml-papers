@@ -2,6 +2,7 @@
 
 Source: https://www.researchgate.net/publication/277411157_Deep_Learning
 by Yann LeCun, Yoshua Bengio & Geoffery Hinton
+Year: 2015
 
 ---
 
