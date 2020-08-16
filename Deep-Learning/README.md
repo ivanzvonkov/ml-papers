@@ -1,7 +1,9 @@
 # Deep Learning
 
 Source: https://www.researchgate.net/publication/277411157_Deep_Learning
+
 by Yann LeCun, Yoshua Bengio & Geoffery Hinton
+
 Year: 2015
 
 ## General
@@ -14,7 +16,7 @@ Year: 2015
 
 -   Deep Learning is advantageous over previous Machine Learning methods because it **automatically** learns the features necessary for detection or classification (unlike classical Machine Learning)
 
-![ML vs DL](MLvsDL.png)
+![ML vs DL](assets/MLvsDL.png)
 
 -   Additionally performance can increase with more data and computation without much human intervention
 -   Deep Learning has allowed for great improvements in speech recognition,visual object recognition, object detection, natural language understanding (ie. language translation)
@@ -22,7 +24,7 @@ Year: 2015
 #### What does a Deep Neural Network consist of?
 
 A neural network contains several layers, every layer contains several units.
-![Neural Net](NeuralNet.png)
+![Neural Net](assets/NeuralNet.png)
 
 **Unit - Calculating z (weighted sum of previous layer)**
 
@@ -55,7 +57,6 @@ Supervised Classification:
 3. Testing
     - The performance of a system is measured on a previsiouly unseen labeled test set by comparing the predicted labels with the actual labels using the error or some other metric
 
-
 ## Convulational Neural Networks
 
 #### What are Convolotunional Neural Networks?
@@ -68,7 +69,7 @@ Neural Nets designed for processing data in the form of multiple arrays. Example
 
 #### What does a ConvNet consist of?
 
-![Conv Net](ConvNet.jpeg)
+![Conv Net](assets/ConvNet.jpeg)
 
 -   Convolutional layers - detect local conjuctions of feature from previous layer
     -   How: convolve the ouput of the previous layer with a series of filters (made up of weights) to get output z and then pass z through an activation layer (such as ReLU), the output is termed a feature map
@@ -88,7 +89,6 @@ ConvNets take advantage of properties of natural signals through:
 3. pooling - keeps the feture map sizes in check
 4. use of many layers - allows for learning of more complex features
 
-
 ## Distributed Representations
 
 Deep Neural Networks discover distributed representations for data. No single unit in the network is responsible for determining the representation but taken together the activations provide a coherent representation.
@@ -98,8 +98,7 @@ Deep Neural Networks discover distributed representations for data. No single un
 -   Deep Learning can be applied to learn meaningful word vectors based on the words proximity to other words in the corpus
 -   The activations for each word is the word vector
 
-![Learning Word Vecs](LearningWordVecs.png)
-
+![Learning Word Vecs](assets/LearningWordVecs.png)
 
 ## Recurrent Neural Networks
 
@@ -124,7 +123,7 @@ RNNs have performed well at
 -   h<sub>1</sub> = activation( (W<sub>x</sub>@x<sub>1</sub> + b<sub>x</sub>) + (W<sub>h</sub>@h<sub>0</sub> + b<sub>h</sub>) )
 -   y<sub>1</sub> = W<sub>y</sub>@h<sub>1</sub> + b<sub>y</sub>
 
-![RNN](RNN.png)
+![RNN](assets/RNN.png)
 
 -   Backpropagation can be applied by considering outputs at different time steps as outputs of a single single neural net
 
@@ -132,7 +131,6 @@ RNNs have performed well at
 
 -   The Recurrent Neural Network is designed to learn long-term dependenies however it has limitations with string information
 -   For that reason explicit memory has been introduced with LSTMs
-
 
 ## Future of Deep Learning
 

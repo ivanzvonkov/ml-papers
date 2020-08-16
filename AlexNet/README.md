@@ -32,7 +32,7 @@ The only preprocessing was centering the RGB pixel values by subtracting the mea
 
 -   ReLU
     -   Used ReLU Nonlinearity for activation function instead of the standrd sigmoid or tanh activation function
-    -   ![tanh vs ReLU](tanhVsReLU.png)
+    -   ![tanh vs ReLU](assets/tanhVsReLU.png)
     -   Result: much faster training time
 -   Multiple GPUs
     -   Trained on two GTx 580 GPUs (3GB memory) - neurons are split over both GPUs, some layers pass their outputs to the other GPU but some layers only pass output to next layer on same GPU
@@ -40,8 +40,8 @@ The only preprocessing was centering the RGB pixel values by subtracting the mea
 -   Local Response Normalization
     -   Normalization is needed because ReLU is unbounded and to encourage lateral inhibition - so locally maximum pixel values are noticed
     -   Inter-Channel LRN is used here direectly after ReLU
-        -   Formula: ![LRN Equation](LRNEquation.png)
-            ![Local Response Normalization](LocalResponseNormalization.png)
+        -   Formula: ![LRN Equation](assets/LRNEquation.png)
+            ![Local Response Normalization](assets/LocalResponseNormalization.png)
     -   Result: Reduced top-1 & top-5 error rates by 1.4% & 1.2%
 -   Overlapping Pooling
     -   Max Pooling layers summarize the outputs of neighboring groups of neurons by
@@ -51,10 +51,10 @@ The only preprocessing was centering the RGB pixel values by subtracting the mea
 
 **Full Architecture:**
 Original AlexNet over two GPUs (should start with 227 x 227 x 3)
-![AlexNet](AlexNet.png)
+![AlexNet](assets/AlexNet.png)
 
 AlexNet Merged
-![AlexNet Merged](AlexNetMerged.png)
+![AlexNet Merged](assets/AlexNetMerged.png)
 
 Convolution and Pooling operations
 
@@ -92,7 +92,7 @@ Convolution and Pooling operations
 
 -   Stochastic Gradient Descent with batch size of 128 examples
 -   The weight update rule is:
-    ![Weight Update Rule](WeightUpdateRule.png)
+    ![Weight Update Rule](assets/WeightUpdateRule.png)
     -   Momentum = 0.9
     -   Weight decay = 0.0005
     -   Learning rate e was manually tuned throughout training
