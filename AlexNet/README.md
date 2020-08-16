@@ -1,7 +1,9 @@
 # ImageNet Classification wit Deep Convolutional Neural Networks
 
 Source: https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
+
 by Alex Krizhevsky, Ilya Sutskever & Geoffery Hinton
+
 Year: 2012
 
 ## Summary
