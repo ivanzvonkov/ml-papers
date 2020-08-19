@@ -85,7 +85,7 @@ Convolution and Pooling operations
 
 -   Each hidden neuron has a 0.5 porbability of being set to 0
 -   The neurons that are dropped in this way do not contribute to forward or backward pass
--   Dropout is used in he first two fully-connected layers
+-   Dropout is used in the first two fully-connected layers
 -   Result: Doubles number of iterations to converge but substantially limits overfitting
 
 ## Learning
