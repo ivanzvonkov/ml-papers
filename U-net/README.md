@@ -39,6 +39,7 @@ Image segmentation is useful for:
 -   A regular downsampling convoluion can be rolled out such that the input image is represented as a vector and the convolution as a matrix such that taking the dot product: `conv_matrix@input_vector = output_vector`
     <img src='assets/NormalConvolution.png' width='100%'>
 -   Similarly an upsampling convolution can be accomplished by transposing the conv_matrix: `conv_matrix.T@input_vector = output_vector`
+
     <img src='assets/UpsampledConvolution.png' width='70%'>
 
 ## Architecture
