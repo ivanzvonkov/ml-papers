@@ -1,6 +1,6 @@
 # ML Papers
 
-This repository contains summaries of well-known Machine Learning papers
+This repository contains summaries of well-known Machine Learning papers.
 
 #### Deep Learning Basics:
 
@@ -10,5 +10,6 @@ This repository contains summaries of well-known Machine Learning papers
 #### Deep Learning in Computer Vision:
 
 -   [AlexNet](AlexNet/README.md)
--   [VGGNet](VGGNet/README.md)
+-   [ResNet](ResNet/README.md)
 -   [U-Net](UNet/README.md)
+-   [VGGNet](VGGNet/README.md)
