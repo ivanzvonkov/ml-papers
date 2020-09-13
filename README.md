@@ -1,6 +1,6 @@
 # ML Papers
 
-This repository contains summaries of well-known Machine Learning papers.
+This repository contains summaries of some ML papers I am trying to understand.
 
 #### Deep Learning Basics:
 
