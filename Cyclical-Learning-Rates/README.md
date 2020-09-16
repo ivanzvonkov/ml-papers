@@ -10,36 +10,38 @@ Year: 2015 (original), 2017 (v5)
 
 Of all hyperparameters that can be tuned during neural network training, tuning the learning rate has the largest impact. This paper:
 
-1. Proposes a cyclical learning rate (CLR) instead of the conventional monotonically decreasing learning rate
-2. Proposes a simple method for selecting the bounds of the cyclical learning.
-3. Shows that using CLR on standard image classification architectures often produces higher accuracy and faster convergence.
+1. Proposes a cyclical learning rate (CLR) that periodically increases and decreases instead of the conventional monotonically decreasing learning rate
+2. Proposes a simple method for selecting the bounds of the cyclical learning rate
+3. Shows that using CLR to train state-of-the-art image classification models generally produces higher accuracy and faster convergence
 
 ![CIFAR10 with CLR](assets/CIFAR10withCLR.png)
 
 ## Intuition
 
-A separate paper argues that optimization in a high dimensional space is difficult because of saddle points rather than poor local minima. With this knowledge, the below image of a saddle point from Jeremy Jordan's [blog post](https://www.jeremyjordan.me/nn-learning-rate/) illustrates the intution behind periodically increasing the learning rate.
+A separate paper argues that optimization in a high dimensional space is difficult because of saddle points rather than poor local minima. With this knowledge, the below image of a saddle point from Jeremy Jordan's [blog post](https://www.jeremyjordan.me/nn-learning-rate/) illustrates the intution behind periodically increasing the learning rate instead of solely decreasing.
 ![Saddle Point](assets/SaddlePoint2.png)
 
 ## Computing the Cyclical Learning Rate
 
-Different wave types were tested for a cyclical learning rate:
+Different wave types were tested for cyclical learning rates including:
 
--   Triangle wave
--   Sine wave
--   Parabolic wave
+-   A triangle wave
+-   A sine wave
+-   A parabolic wave
 
 Ultimately all achieved similar results so the triangule wave was chosen for its simplicity.
 <img src='assets/CLR.png' width='50%'>
 
 ```Python
+import math
+
 def get_lr(base_lr, max_lr, step_size, current_iteration):
     """
     Calculates the current value of the cyclic learning rate
     :param base_lr, float: minimum learning rate boundary
     :param max_lr, float: maximum learning rate boundary
     :param step_size, int: amount of iterations in half a cycle
-    :current_iteration, int: current iteration number
+    :param current_iteration, int: current iteration number
     """
     iterations_in_one_cycle = step_size * 2
 
@@ -54,7 +56,8 @@ def get_lr(base_lr, max_lr, step_size, current_iteration):
     # We start with current_cycle at 1 and half_cycle_progress at 0 so the range is (-2,0)
 
     # Triangle function from 1 to 0 to 1
-    x = math.abs(position_in_cycle + 1)
+    x = 1 - math.abs(position_in_cycle + 1)
+    # Subtracted from 1 so it starts with a high learning rate
 
     # Scaled to match learning rate
     lr = base_lr + (max_lr - base_lr)*math.max(0, 1-x)
@@ -65,26 +68,39 @@ def get_lr(base_lr, max_lr, step_size, current_iteration):
 
 Setting the `base_lr` and `max_lr` will be discussed below.
 The author achieved good results between
-`step_size = 2*(iterations_in_epoch)` and
-`step_size = 10*(iterations_in_epoch)`
 
-Above [blog post](https://www.jeremyjordan.me/nn-learning-rate/) is good resource to really understand the above.
+```Python
+step_size = 2*(iterations_in_epoch)
+```
+
+and
+
+```Python
+step_size = 10*(iterations_in_epoch)
+```
+
+The above [blog post](https://www.jeremyjordan.me/nn-learning-rate/) is good resource to really understand the above.
 
 ## Variants
 
 -   triangular2: Learning rate difference is cut in half at end of each cycle
-    -   Denoted as Triagular schedule with fixed decay below
--   exp_range: Each boundary value declines by an exponential factor gamma<sup>current_iteration</sup>
-    -   Denoted as Triangular schedule with exponential decay below
+    -   Denoted as _Triagular schedule with fixed decay_ below
+-   exp_range: Each boundary value declines by an exponential factor: gamma<sup>current_iteration</sup>
+    -   Denoted as _Triangular schedule with exponential decay_ below
 
 <img src='assets/CLRVariants.png' width='50%'/>
 
-Although decay is added to these variants, Leslie Smith goes on to show that decay alone from max_lr to base_lr is not suffficient. The periodic increase of the learning rate is shown to achieve better results on CIFAR10.
+Although decay is added to these variants, Leslie Smith goes on to show that decay alone from max_lr to base_lr is not suffficient. Including the periodic increase of the learning rate is shown to achieve better results on CIFAR10.
 
 ## LR Range Test / Getting Good Learning Rate Boundaries
 
-The LR range test consists of running your model for several epochs while linearly increasing the learning rate from a very low to a very high value and tracking the loss or accuracy. Select the `base_lr` as the learning rate when the loss begins to decrease and `max_lr` to the learning rate during the lowest loss before it became too jagged.
+The LR range test consists of running your model for several epochs while linearly increasing the learning rate from a very low to a very high value and tracking the loss or accuracy.
+
+-   The `base_lr` can be set as the learning rate when the loss begins to decrease
+-   The `max_lr` can be set as the learning rate during the lowest loss before it became too jagged
+
 In the example below accuracy is used instead of loss.
+
 ![LR Range Test](assets/LRTest.png)
 
 ## Results
@@ -108,6 +124,6 @@ In the example below accuracy is used instead of loss.
 
 ![CLR on GoogLeNet](assets/CLRonGoogLeNet.png)
 
-Better results were achieved with faster convergence on many state-of-the-art architectures at the time using one of the proposed CLR techniques,
+Better results were achieved with faster convergence on many state-of-the-art architectures at the time using one of the proposed CLR techniques.
 
-Author considered doing a theoretical analysis of this technique and testing it out on Recurrent Neural Nets (RNNs).
+For future relevant work, the author considered doing a theoretical analysis of this technique and testing it out on Recurrent Neural Nets (RNNs).
