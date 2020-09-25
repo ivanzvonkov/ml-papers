@@ -76,7 +76,7 @@ C<sub>with FreezeOut</sub> = ∑ ( ( 1 + t<sub>i</sub> ) • c<sub>i</sub> • n
 
 Then the speedup when using FreezeOut is 1 - C<sub>with FreezeOut</sub>/C<sub>without FreezeOut</sub>
 
-Authors recommend a default stratey of cubic scheduling with learning rate scaling with t<sub>0</sub> = 0.8 to minimize training time within a 3% relative error.
+Authors recommend a default stratey of cubic scheduling with learning rate scaling with t<sub>0</sub> = 0.8 to minimize training time and stay within a 3% relative error.
 
 ## Code
 
