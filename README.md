@@ -11,6 +11,7 @@ This repository contains summaries of some ML papers I am trying to understand.
 
 -   [AlexNet](AlexNet/README.md)
 -   [Cyclical-Learning-Rates](Cyclical-Learning-Rates/README.md)
+-   [FreezeOut](FreezeOut/README.md)
 -   [ResNet](ResNet/README.md)
 -   [U-Net](UNet/README.md)
 -   [VGGNet](VGGNet/README.md)
