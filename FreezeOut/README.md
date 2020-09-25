@@ -8,11 +8,11 @@ Year: 2017
 
 ## Main Idea
 
-Improve deep learning model training time by progressively decrease the learning rates of each layer to 0 starting with the first layer and ending with the last layer.
+Improve deep learning model training time by progressively decreasing the learning rates of each layer to 0 starting with the first layer and ending with the last layer.
 
 ## Intuition
 
-In deep architectures, the early layers learn simple configurations (ie. edge detectors) yet take a large portion of the training budget. The FreezeOut technique stems from the idea that the early layers do not require as much fine tuning.
+In deep architectures, the early layers learn simple configurations (ie. edge detectors) yet take a large portion of the training budget. The FreezeOut technique stems from the idea that the early layers do not require as much fine tuning as the later layers.
 
 ## Math
 
@@ -56,17 +56,22 @@ a<sub>i</sub>(t) = 0.5 • ( a / t<sub>i</sub><sup>3</sup> )(1 + cos( π t / t<s
 
 ## Experiments
 
--   Tested each of the four learning rate scheduling strategies on CUFAR-10 and CIFAR-100 with
+Tested each of the four learning rate scheduling strategies on CUFAR-10 and CIFAR-100 with:
+
 -   DenseNets (faster and same accuracy),
 -   wide ResNets (faster and better accuracy),
 -   VGG (no improvement)
 
 ## Conclusion:
 
-Calculation for how figuring out how much faster you can train with FreezeOut:
+Calculation for figuring out how much faster you can train with FreezeOut:
+
 c<sub>i</sub> := cost of one forward or backward pass for a conv layer
+
 C := total cost of training for n iterations
+
 C<sub>without FreezeOut</sub> = ∑ ( 2c<sub>i</sub> • n<sub>iteration</sub>)
+
 C<sub>with FreezeOut</sub> = ∑ ( ( 1 + t<sub>i</sub> ) • c<sub>i</sub> • n<sub>iteration</sub>)
 
 Then the speedup when using FreezeOut is 1 - C<sub>with FreezeOut</sub>/C<sub>without FreezeOut</sub>
