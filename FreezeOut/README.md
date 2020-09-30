@@ -48,7 +48,7 @@ a<sub>i</sub>(t) = 0.5 • a<sub>i</sub>(0)(1 + cos( π t / t<sub>i</sub><sup>3<
 
 <img src='assets/StandardLRDecreaseCubedIteration.png'>
 
-#### 4. Scaling decrease and cubing layer end iteration (t<sub>i</sub>):
+#### 4. Scaling decrease and cubing layer end iteration (t<sub>i</sub><sup>3</sup>):
 
 a<sub>i</sub>(t) = 0.5 • ( a / t<sub>i</sub><sup>3</sup> )(1 + cos( π t / t<sub>i</sub><sup>3</sup> ))
 
