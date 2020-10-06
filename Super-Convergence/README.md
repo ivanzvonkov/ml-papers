@@ -21,7 +21,7 @@ The higher accuracy depends on step size (amout of iterations in half a cycle).
 -   Recall LR range test increases learning rate at each iteration and plots the accuracy to find the min and max learning rate for CLR
 -   Super Convergence indicator: LR range test where accuracy remains high with large learning rates
 
-![Super Convergence indicator](assets/Superconvergence-indicator.png)
+![Super Convergence indicator](assets/SuperConvergence-indicator.png)
 
 ## 1cycle Learning Rate Policy
 
