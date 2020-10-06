@@ -28,13 +28,11 @@ The higher accuracy depends on step size (amout of iterations in half a cycle).
 -   Only use one cycle (slightly smaller than total number of iterations/epochs)
 -   In remaining iterations, decrease the learning rate even further than the minimum bound
 
-#### Why it works
-
-#### Intuition
+#### Why it works - Intuition
 
 ![Intuition](assets/Intuition.png)
 
-#### Proof
+#### Why it works - Proof
 
 -   The authors compute an optimal learning rate every 10 iterations (using the simplification of the second order Hessian-Free optimization) when training with the 1cycle policy and the standard method
 -   They show that the 1cycle policy maintains a high optimal learning rate throughout training, meaning it better finds flat and wide local minima
