@@ -1,6 +1,6 @@
 # Super-Convergence: Very Fasy Training of Neural Networks Using Large Learning Rates
 
-Source: https://arxiv.org/abs/1706.04983
+Source: https://arxiv.org/pdf/1708.07120.pdf
 
 by Leslie N. Smith (U.S. Naval Research Lab), Nicholay Topin (University of Maryland)
 
