@@ -12,6 +12,7 @@ This repository contains summaries of some ML papers I am trying to understand.
 -   [AlexNet](AlexNet/README.md)
 -   [Cyclical-Learning-Rates](Cyclical-Learning-Rates/README.md)
 -   [FreezeOut](FreezeOut/README.md)
+-   [Intriguing-Properties](Intriguing-Properties/README.md)
 -   [ResNet](ResNet/README.md)
 -   [Super-Convergence](Super-Convergence/README.md)
 -   [U-Net](UNet/README.md)
