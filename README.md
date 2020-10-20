@@ -17,3 +17,7 @@ This repository contains summaries of some ML papers I am trying to understand.
 -   [Super-Convergence](Super-Convergence/README.md)
 -   [U-Net](UNet/README.md)
 -   [VGGNet](VGGNet/README.md)
+
+#### Machine Learning in Healthcare:
+
+-   [Challenges and Opportunities in ML for Health](ML-for-Health-Review/README.md)

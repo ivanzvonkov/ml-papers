@@ -1,4 +1,4 @@
-# A review of Challenges and Opportunities in Machine Learning for Health
+# A Review of Challenges and Opportunities in Machine Learning for Health
 
 by Marzyeh Ghassemi (UofT), Tristan Naumann (Microsoft), Peter Schulam (Johns Hopkins), Andrew L. Beam (Harvard), Irene Y. Chen (MIT), Rajesh Ranganath (NYU)
 
