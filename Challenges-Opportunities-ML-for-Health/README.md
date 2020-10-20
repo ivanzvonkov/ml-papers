@@ -14,8 +14,10 @@ A growing amount of electronic health records (EHRs) makes healthcare suitable f
 
 -   Many questions in healthcare answer causal questions - "what if treatment x is used for patient y?"
 -   Causal questions are beyond the reach of classical ML because classical ML most often uses data collected observationally and thereby the way that the data was observed has a large impact
+
     -   Example: A model predicted that death from asthma is less likely if the patient already has asthma
     -   This occured because patients with asthma were treated earlier and better and therefore the dataset had more examples of successful treatment
+
         <img src='assets/Inhaler.jpg' width='40%'>
 
 Suggestions:
@@ -45,7 +47,9 @@ Suggestions:
     -   Healthcare is not a "solved" problem so the ground truth is debatable and has to be thought through
     -   For example building a model based on some clinicians' treatment choice could predict the collective treatment preference rather than the best underlying treatment
 -   Beware of label-leakage
+
     -   Example: A model trained using time data could learn 'if the ventilator is turned off, predict death in one hour' but this is not useful
+
         <img src='assets/ventilator.jpg' width='50%'>
 
 ## Opportunities for ML in Healthcare
@@ -54,6 +58,7 @@ Suggestions:
 
 -   Automating routing processes (ie. triage order, summarizing medical records)
 -   Automaing medical image evaluation (ie. x-rays)
+
     <img src='assets/ml-xray.jpg' width='50%'>
 
 #### 2. Optimizing clinical decision and practice support
@@ -66,6 +71,7 @@ Suggestions:
 -   Continous behavioural monitoring (ie. apple watch for heart attack)
 -   Precision medicine for early individualzed treatment - tracing a patient history and long-term progression
 -   Expanding coverage of evidence (approximating Randomized Control Trials [RCTs] through tracking data in ICU treatments)
+
     <img src='assets/RCT.jpg' width='70%'>
 
 ## Opportunities for ML research in Healthcare
@@ -73,9 +79,12 @@ Suggestions:
 #### 1. Accomodating for non-stationarity in Learning and Deployment
 
 -   **Internal Validity** - shift over time - concept drift - model becomes less and less accurate over time because times are a changing
+
     <img src='assets/Concept-drift.jpg'>
+
 -   **External Validitiy** - shift over data sources - model does not generalize well from one hospital to the other because data is recorded differently
 -   **Creating models robust to feedback loops** - models that learn from current clinical practice inherit the biases of modern healthcare (SciBERT example with race)
+
     <img src='assets/Inherting-bias.png' width='50%'>
 
 #### 2. Interpretable models and recommendations
