@@ -18,10 +18,17 @@ This repository contains summaries of some ML papers I am trying to understand.
 -   [U-Net](UNet/README.md)
 -   [VGGNet](VGGNet/README.md)
 
+#### Document AI
+
+-   [FUNSD Dataset **WIP**](FUNSD/README.md)
+
+
+#### Machine Learning in Food Security:
+
+-   [Rapid Response Crop Maps in Data Sparse Regions](Crop-Maps-in-Data/README.md)
+
 #### Machine Learning in Healthcare:
 
 -   [Challenges and Opportunities in ML for Health](ML-for-Health-Review/README.md)
 
-#### Document AI
 
--   [FUNSD Dataset **WIP**](FUNSD/README.md)
