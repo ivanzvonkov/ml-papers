@@ -25,7 +25,7 @@ This repository contains summaries of some ML papers I am trying to understand.
 
 #### Machine Learning in Food Security:
 
--   [Rapid Response Crop Maps in Data Sparse Regions](Crop-Maps-in-Data/README.md)
+-   [Rapid Response Crop Maps in Data Sparse Regions](Crop-Maps-in-Data-Sparse-Regions/README.md)
 
 #### Machine Learning in Healthcare:
 
