@@ -21,3 +21,7 @@ This repository contains summaries of some ML papers I am trying to understand.
 #### Machine Learning in Healthcare:
 
 -   [Challenges and Opportunities in ML for Health](ML-for-Health-Review/README.md)
+
+#### Document AI
+
+-   [FUNSD Dataset **WIP**](FUNSD/README.md)
